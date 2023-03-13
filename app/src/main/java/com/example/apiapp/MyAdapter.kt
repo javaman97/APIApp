@@ -4,6 +4,7 @@ import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
@@ -14,10 +15,11 @@ RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
     class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
         var title:TextView
         var image: CircleImageView
-
+        var ratingBar: RatingBar
         init {
             title=itemView.findViewById(R.id.txt_productName)
             image=itemView.findViewById(R.id.img_product)
+            ratingBar=itemView.findViewById(R.id.ratingBar)
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -34,5 +36,6 @@ RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
         holder.title.text=currentItem.title
 
         Picasso.get().load(currentItem.thumbnail).into(holder.image)
+        holder.ratingBar.rating = currentItem.rating.toFloat()
     }
 }

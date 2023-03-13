@@ -27,11 +27,17 @@
             <TextView
                 android:id="@+id/txt_productName"
                 android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
                 android:text="Burger"
                 android:textAlignment="center"
-                android:textSize="26sp" />
+                android:textSize="20sp" />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:numStars="5"
+                />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
