@@ -10,33 +10,32 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:background="@drawable/background"
         android:layout_height="wrap_content">
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_product"
-            android:src="@drawable/ic_launcher_background"
-            app:civ_border_width="3dp"
+            android:background="@color/shimmer_color"
             android:layout_margin="5dp"
-            app:civ_border_color="#F8E7B5"
             android:layout_width="75dp"
             android:layout_height="75dp"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:layout_margin="5dp"
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/txt_productName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Burger"
+                android:background="@color/shimmer_color"
+                android:layout_margin="5dp"
                 android:textAlignment="center"
                 android:textSize="20sp" />
             <RatingBar
                 android:id="@+id/ratingBar"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="245dp"
+                android:layout_margin="8dp"
                 android:layout_height="match_parent"
-                android:numStars="5"
+                android:background="@color/shimmer_color"
                 />
         </LinearLayout>
     </LinearLayout>
